@@ -36,6 +36,20 @@ body {
   box-shadow: 0 0 0 0.2rem rgba(37, 117, 252, 0.2);
 }
 
+/* Password field with show/hide toggle */
+.input-group .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.toggle-password {
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  color: #6c757d;
+}
+
 .btn-primary {
   padding: 0.65rem;
   border-radius: 0.6rem;

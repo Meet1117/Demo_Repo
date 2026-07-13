@@ -1,6 +1,23 @@
 const form = document.getElementById("loginForm");
 const message = document.getElementById("message");
 
+// Show / hide password toggle
+const togglePassword = document.getElementById("togglePassword");
+const passwordInput = document.getElementById("password");
+const eyeIcon = togglePassword.querySelector(".icon-eye");
+const eyeSlashIcon = togglePassword.querySelector(".icon-eye-slash");
+
+togglePassword.addEventListener("click", () => {
+  const isHidden = passwordInput.type === "password";
+  passwordInput.type = isHidden ? "text" : "password";
+  eyeIcon.classList.toggle("d-none", isHidden);
+  eyeSlashIcon.classList.toggle("d-none", !isHidden);
+  togglePassword.setAttribute(
+    "aria-label",
+    isHidden ? "Hide password" : "Show password"
+  );
+});
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
